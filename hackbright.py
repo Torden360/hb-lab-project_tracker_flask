@@ -53,9 +53,10 @@ def make_new_student(first_name, last_name, github):
     db.session.execute(QUERY, {'first_name': first_name,
                                'last_name': last_name,
                                'github': github})
+
     db.session.commit()
 
-    print(f"Successfully added student: {first_name} {last_name}")
+    return print(f"Successfully added student: {first_name} {last_name}")
 
 
 def get_project_by_title(title):
